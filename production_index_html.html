@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Agent v1.0</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <div class="header">
+            <div class="ascii-art pulse">
+                ╔══════════════════════════════════════╗
+            </div>
+            <div class="ascii-art">
+                ║           MEGA AGENT v1.0            ║
+            </div>
+            <div class="ascii-art pulse">
+                ╚══════════════════════════════════════╝
+            </div>
+            <div class="status">SYSTEM READY • MEMORY: ONLINE • STATUS: ACTIVE</div>
+        </div>
+
+        <!-- Messages Area -->
+        <div id="messages-container" class="messages-container">
+            <div id="welcome-message" class="welcome-message">
+                <div class="pulse">
+                    > ברוכים הבאים למערכת הסוכן החכם
+                </div>
+                <div class="welcome-subtitle">
+                    הקלד הודעה או הקלט קול כדי להתחיל
+                </div>
+            </div>
+        </div>
+
+        <!-- Typing Indicator -->
+        <div id="typing-indicator" class="typing-indicator hidden">
+            <div class="timestamp">[AGENT] מעבד...</div>
+            <div class="message-box agent-message">
+                <div class="typing-content">
+                    <span>הסוכן עובד</span>
+                    <div class="dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <div class="input-container">
+                <input 
+                    type="text" 
+                    id="message-input" 
+                    placeholder="הקלד הודעה..."
+                    class="message-input"
+                >
+                
+                <button id="mic-button" class="mic-button" title="הקלט קול">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                    </svg>
+                </button>
+                
+                <button id="send-button" class="send-button" title="שלח הודעה">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="help-text">
+                ENTER = שליחה • ESC = ביטול • CLICK MIC = הקלטה
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
